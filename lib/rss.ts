@@ -26,7 +26,7 @@ export function filterByCategory(posts: TistoryPost[], category: string): Tistor
 }
 
 export async function fetchTistoryPosts(categoryFilter?: string): Promise<TistoryPost[]> {
-  const res = await fetch('https://kong6985.tistory.com/rss', { cache: 'no-store' })
+  const res = await fetch('https://kong6985.tistory.com/rss', { cache: 'force-cache' })
   const xml = await res.text()
   const posts = parseRssXml(xml)
   if (!categoryFilter) return posts
