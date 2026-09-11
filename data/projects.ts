@@ -45,4 +45,18 @@ Flutter로 크로스플랫폼 앱을 구현해 iOS/Android 모두 지원합니�
 외부 의존성 없이 정적 파일로만 동작하는 것이 특징입니다.`,
     accentColor: '#dc2626',
   },
+  {
+    slug: 'traffic-light-recognition',
+    title: '야간 신호등 인식',
+    summary: '빛 번짐 현상을 이용한 야간 교통신호등 색상 인식',
+    techStack: ['Python', 'OpenCV', 'NumPy', 'Matplotlib'],
+    githubUrl: 'https://github.com/kongkong1204/traffic_light-imageProcess-',
+    highlight: '논문 "야간 영상에서의 빛 번짐 현상을 이용한 교통신호등 인식"(김민기, 2017) 재현 — 링(Ring) 탐색 알고리즘으로 빛 번짐 색상을 추출해 신호등 색을 판별',
+    description: `야간 영상에서는 신호등 불빛 주변에 빛 번짐(glow)이 생겨 단순 색상 검출로는 오검출이 잦다는 문제에서 출발했습니다.
+HSV로 변환한 영상의 V채널을 이진화해 점등 후보 영역을 찾고, 크기·원형도·종횡비 필터로 배경 노이즈를 제거합니다.
+이후 후보 영역 주변에서 채도가 가장 높은 링(Ring)을 탐색해 빛 번짐의 실제 색상을 추출하고,
+HSV 조건표와 RGB 보정표를 함께 적용해 red/yellow/green을 판별합니다.
+OpenCV와 NumPy 벡터 연산으로 파이프라인을 구현하고 Matplotlib으로 검출 결과를 시각화했습니다.`,
+    accentColor: '#f59e0b',
+  },
 ]
