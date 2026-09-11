@@ -12,7 +12,10 @@
       "Bash(npx tsc *)",
       "Bash(npm test *)",
       "Bash(mkdir -p \"/Users/mac_kong/PF/app/projects/[slug]\")",
-      "Bash(cat)"
+      "Bash(cat)",
+      "Skill(run)",
+      "Bash(chromium-cli *)",
+      "Bash(open *)"
     ]
   }
 }

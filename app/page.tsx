@@ -44,8 +44,7 @@ export default function HomePage() {
             {profile.school} · {profile.year}
           </p>
           <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed max-w-md mx-auto md:mx-0">
-            알고리즘과 모바일·웹 개발에 관심이 많은 신입 개발자입니다.
-            실제 문제를 코드로 해결하는 것을 즐깁니다.
+            공기업 취직 희망.
           </p>
 
           <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-8">
