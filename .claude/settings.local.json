@@ -15,7 +15,9 @@
       "Bash(cat)",
       "Skill(run)",
       "Bash(chromium-cli *)",
-      "Bash(open *)"
+      "Bash(open *)",
+      "Bash(git *)",
+      "Bash(gh pr *)"
     ]
   }
 }
