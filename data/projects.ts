@@ -4,6 +4,7 @@ export type Project = {
   summary: string
   techStack: string[]
   githubUrl?: string
+  awardUrl?: string
   highlight: string
   description: string
   accentColor: string
@@ -28,6 +29,7 @@ Flutter로 크로스플랫폼 앱을 구현해 iOS/Android 모두 지원합니�
     title: '효자손',
     summary: '사회복지 사각지대 노인을 위한 앱',
     techStack: ['AppSheet', 'Google Sheets'],
+    awardUrl: 'https://www.gnict.org/게시판/sw경진대회/경남-sw경진대회-결과/',
     highlight: '경남 SW경진대회 수상작 — 노코딩 플랫폼으로 실제 서비스 수준의 앱 구현',
     description: `사회복지 사각지대에 놓인 노인분들이 필요한 복지 서비스를 쉽게 찾고 신청할 수 있도록 돕는 앱입니다.
 구글 노코딩 플랫폼 AppSheet를 활용해 빠르게 프로토타입을 구현했으며,

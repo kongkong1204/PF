@@ -51,16 +51,28 @@ export default async function ProjectDetailPage({ params }: Props) {
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{project.description}</p>
       </section>
 
-      {project.githubUrl && (
-        <a
-          href={project.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-semibold hover:opacity-80 transition-opacity"
-        >
-          GitHub에서 보기 →
-        </a>
-      )}
+      <div className="flex flex-wrap gap-3">
+        {project.githubUrl && (
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-semibold hover:opacity-80 transition-opacity"
+          >
+            GitHub에서 보기 →
+          </a>
+        )}
+        {project.awardUrl && (
+          <a
+            href={project.awardUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg text-sm font-semibold hover:border-gray-900 dark:hover:border-white transition-colors"
+          >
+            수상 결과 보기 →
+          </a>
+        )}
+      </div>
     </div>
   )
 }
