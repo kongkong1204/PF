@@ -5,6 +5,9 @@ export type Project = {
   techStack: string[]
   githubUrl?: string
   awardUrl?: string
+  noticeUrl?: string
+  planUrl?: string
+  status?: string
   highlight: string
   description: string
   accentColor: string
@@ -60,5 +63,24 @@ HSV로 변환한 영상의 V채널을 이진화해 점등 후보 영역을 찾�
 HSV 조건표와 RGB 보정표를 함께 적용해 red/yellow/green을 판별합니다.
 OpenCV와 NumPy 벡터 연산으로 파이프라인을 구현하고 Matplotlib으로 검출 결과를 시각화했습니다.`,
     accentColor: '#f59e0b',
+  },
+  {
+    slug: 'space-manufacturing-ai-agent',
+    title: '우주항공 제조 AI Agent',
+    summary: '설비 이상탐지·불량 판별 AI Agent — 제4회 경남 AI·SW 경진대회 출품 예정',
+    techStack: ['PyTorch', '1D CNN', 'LLM Agent', 'Python'],
+    status: '진행 예정 (2026.09.29 ~ 10.06)',
+    noticeUrl: 'https://www.gnict.org/게시판/sw경진대회/제4회-경남ai-sw경진대회-공고/',
+    planUrl: '/docs/space-manufacturing-ai-agent-plan.md',
+    highlight: '제조 현장의 진동·비전 두 이종 신호를 하나의 AI Agent가 통합 모니터링 — Perceive → Reason → Act 구조로 판단부터 정비 리포트까지 자동화',
+    description: `제조 현장에서는 회전체(엔진 등)는 진동/소음 신호로, 생산라인 비전 검사는 표면 프로파일 신호로 서로 다른 방식의 이상 신호가 발생합니다.
+이 프로젝트는 이 두 이종 신호를 하나의 AI Agent가 함께 모니터링해 개별 판단 → 종합 리포트 → 조치 제안까지 자동화하는 것을 목표로 합니다.
+
+Engine(KAMP Ford)과 Machine Vision(KAMP 2차 공정) 두 데이터셋에 각각 1D CNN 이상탐지 모델을 적용하고(Perceive),
+두 모델의 판단 결과를 LLM에 전달해 종합 판단과 근거를 자연어로 생성하며(Reason),
+정비 리포트 자동 작성과 알림 Tool Call까지 이어지는 구조입니다(Act).
+
+제4회 경남 AI·SW 경진대회 제조 피지컬 AI Agent 분야 출품을 목표로 8일간(2026.09.29~10.06) 개발할 예정입니다.`,
+    accentColor: '#0ea5e9',
   },
 ]

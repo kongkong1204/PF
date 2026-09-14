@@ -28,6 +28,11 @@ export default async function ProjectDetailPage({ params }: Props) {
       </Link>
 
       <div className="w-16 h-1.5 rounded-full mb-6" style={{ backgroundColor: project.accentColor }} />
+      {project.status && (
+        <span className="inline-block mb-3 px-3 py-1 bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 rounded-full text-xs font-semibold">
+          {project.status}
+        </span>
+      )}
       <h1 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-2">{project.title}</h1>
       <p className="text-gray-500 dark:text-gray-400 mb-6">{project.summary}</p>
 
@@ -70,6 +75,26 @@ export default async function ProjectDetailPage({ params }: Props) {
             className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg text-sm font-semibold hover:border-gray-900 dark:hover:border-white transition-colors"
           >
             수상 결과 보기 →
+          </a>
+        )}
+        {project.noticeUrl && (
+          <a
+            href={project.noticeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg text-sm font-semibold hover:border-gray-900 dark:hover:border-white transition-colors"
+          >
+            대회 공고 보기 →
+          </a>
+        )}
+        {project.planUrl && (
+          <a
+            href={project.planUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg text-sm font-semibold hover:border-gray-900 dark:hover:border-white transition-colors"
+          >
+            개발계획서 보기 →
           </a>
         )}
       </div>

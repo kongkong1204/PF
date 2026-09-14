@@ -11,6 +11,11 @@ export function ProjectCard({ project }: { project: Project }) {
         className="w-12 h-1 rounded-full mb-4 transition-all group-hover:w-20"
         style={{ backgroundColor: project.accentColor }}
       />
+      {project.status && (
+        <span className="inline-block mb-2 px-2 py-0.5 bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 rounded-full text-xs font-semibold">
+          {project.status}
+        </span>
+      )}
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
         {project.title}
       </h2>

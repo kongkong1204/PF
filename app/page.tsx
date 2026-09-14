@@ -44,7 +44,7 @@ export default function HomePage() {
             {profile.school} · {profile.year}
           </p>
           <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed max-w-md mx-auto md:mx-0">
-            공기업 취직 희망.
+            인문학을 취미로 즐기는 컴퓨터공학도입니다.
           </p>
 
           <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-8">
