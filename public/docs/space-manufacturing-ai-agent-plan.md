@@ -40,6 +40,14 @@
 - 참고: 원본 폴더에 참고용 시각화 이미지(jpg, 320×256, jet 컬러맵)가 있으나 **열화상이 아니라 프로파일 시각화**이며, 모델 입력으로는 사용하지 않음 (수치 데이터가 원 신호)
 - **클래스 불균형 대응 필요** (class weight 또는 오버샘플링)
 
+### 2-3. 회전기계 고장유형 AI 데이터셋 (고장분석 보강)
+- 출처: [KAMP 제조AI데이터셋](https://www.kamp-ai.kr/aidataList?AI_SEARCH=&page=1&DATASET_SEQ=&DISPLAY_MODE_SEL=CARD&EQUIP_SEL=&GUBUN_SEL=&FILE_TYPE_SEL=&WDATE_SEL=) — 고장 분석 및 진단을 위한 회전 설비의 진동데이터
+- 로컬 파일: `Dataset_회전기계 고장유형 AI 데이터셋.zip`
+- 구성: g1/g2 그룹 × 센서 1~4, 총 8개 CSV (`g1_sensor1.csv` ~ `g2_sensor4.csv`)
+- 형식: 헤더 없는 시계열, 4개 컬럼(시간 + 진동축 3개 추정), 약 190,218행/파일, 샘플링 간격 0.000736초(≈1.36kHz)
+- 활용 목적: Engine(Ford) 진동 신호 기반 이상탐지 결과의 **고장 유형 분석**을 보강하는 용도로 함께 활용
+- TODO: g1/g2 그룹 및 sensor1~4의 정확한 고장유형 라벨 매핑은 KAMP 데이터셋 설명서 확인 필요
+
 ---
 
 ## 3. 시스템 아키텍처 (Perceive → Reason → Act)
