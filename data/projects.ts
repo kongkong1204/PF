@@ -45,6 +45,7 @@ Flutter로 크로스플랫폼 앱을 구현해 iOS/Android 모두 지원합니�
     title: '메소장',
     summary: '메이플스토리 경매장 시세 추적 웹',
     techStack: ['Vanilla JS', 'SVG'],
+    githubUrl: 'https://github.com/kongkong1204/mesojang',
     highlight: '약 52주치 시세 데이터를 외부 라이브러리 없이 inline SVG로 시각화',
     description: `메이플스토리 인게임 경매장의 아이템 시세를 추적하고 시각화하는 웹 서비스입니다.
 순수 Vanilla JS와 inline SVG만으로 약 52주치 가격 데이터를 차트로 표현했습니다.
