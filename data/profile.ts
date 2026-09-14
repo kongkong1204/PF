@@ -8,7 +8,7 @@ export const profile = {
   tistory: 'https://kong6985.tistory.com',
   gpa: '3.62 / 4.5',
   researchInterest: 'Computer Vision — 이미지 인식 및 객체 탐지 분야에 관심이 있습니다.',
-  certifications: ['정보처리기사', 'SQLD', 'ADsP', '한국사'],
+  certifications: ['SQLD'],
   skills: {
     mobile: ['Flutter', 'Dart'],
     web: ['Next.js', 'React', 'TypeScript', 'JavaScript'],
