@@ -69,19 +69,19 @@ OpenCV와 NumPy 벡터 연산으로 파이프라인을 구현하고 Matplotlib�
     slug: 'space-manufacturing-ai-agent',
     title: '우주항공 제조 AI Agent',
     summary: '설비 이상탐지·불량 판별 AI Agent — 제4회 경남 AI·SW 경진대회 출품 예정',
-    techStack: ['PyTorch', '1D CNN', 'LLM Agent', 'Python'],
+    techStack: ['PyTorch', '1D CNN', '2D CNN', 'LLM Agent', 'Python'],
     status: '진행 예정 (2026.09.29 ~ 10.06)',
     noticeUrl: 'https://www.gnict.org/게시판/sw경진대회/제4회-경남ai-sw경진대회-공고/',
     planUrl: '/docs/space-manufacturing-ai-agent-plan.md',
     datasetUrl: 'https://www.kamp-ai.kr/aidataList?AI_SEARCH=&page=1&DATASET_SEQ=&DISPLAY_MODE_SEL=CARD&EQUIP_SEL=&GUBUN_SEL=&FILE_TYPE_SEL=&WDATE_SEL=',
-    highlight: '제조 현장의 진동·비전 두 이종 신호를 하나의 AI Agent가 통합 모니터링 — Perceive → Reason → Act 구조로 판단부터 정비 리포트까지 자동화',
-    description: `제조 현장에서는 회전체(엔진 등)는 진동/소음 신호로, 생산라인 비전 검사는 표면 프로파일 신호로 서로 다른 방식의 이상 신호가 발생합니다.
+    highlight: '설비 고장분석(진동)과 제품 불량검사(머신비전)를 하나의 AI Agent가 통합 모니터링 — Perceive → Reason → Act 구조로 판단부터 정비/품질 리포트까지 자동화',
+    description: `제조 현장의 품질 관리는 크게 두 축으로 나뉩니다 — 회전 설비(엔진 등)의 고장분석은 진동 신호로, 생산라인 결과물의 불량검사는 머신비전(열화상 이미지)으로 이뤄집니다.
 이 프로젝트는 이 두 이종 신호를 하나의 AI Agent가 함께 모니터링해 개별 판단 → 종합 리포트 → 조치 제안까지 자동화하는 것을 목표로 합니다.
 
-Engine(KAMP Ford)과 Machine Vision(KAMP 2차 공정) 두 데이터셋에 각각 1D CNN 이상탐지 모델을 적용하고(Perceive),
-두 모델의 판단 결과를 LLM에 전달해 종합 판단과 근거를 자연어로 생성하며(Reason),
-정비 리포트 자동 작성과 알림 Tool Call까지 이어지는 구조입니다(Act).
-고장 분석 보강을 위해 KAMP의 회전기계 고장유형 AI 데이터셋(회전 설비 진동데이터)도 함께 활용할 예정입니다.
+고장분석은 Ford 엔진 진동 데이터셋과 회전기계 고장유형 데이터셋을 함께 활용해 1D CNN으로 판단하고,
+불량검사는 열화상 이미지를 활용한 머신비전 데이터를 2D CNN으로 판단합니다(Perceive).
+두 트랙의 판단 결과를 LLM에 전달해 종합 판단과 근거를 자연어로 생성하며(Reason),
+정비/품질 리포트 자동 작성과 알림 Tool Call까지 이어지는 구조입니다(Act).
 
 제4회 경남 AI·SW 경진대회 제조 피지컬 AI Agent 분야 출품을 목표로 8일간(2026.09.29~10.06) 개발할 예정입니다.`,
     accentColor: '#0ea5e9',
